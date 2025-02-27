@@ -9,23 +9,17 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             transition: background-color 0.3s, color 0.3s;
-            height: 100vh; /* Garantir que a tela ocupe toda a altura */
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centraliza horizontalmente */
-            justify-content: flex-start; /* Fixa no topo */
         }
         .container {
             max-width: 400px;
-            width: 100%; /* Ajustar a largura para garantir que se ajuste bem */
+            margin: auto;
             padding: 20px;
             background: white;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             transition: background-color 0.3s, color 0.3s;
-            margin-top: 0; /* Remover margem superior */
         }
         h1 {
             text-align: center;
@@ -45,21 +39,15 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
-            color: #000; /* Cor preta para o texto do input */
-        }
-        input::placeholder {
-            color: #000; /* Cor preta para o placeholder */
         }
         button {
             width: 100%;
-            padding: 6px 15px; /* Botão mais fino, ajustando a altura */
+            padding: 12px;
             background-color: #28a745;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 14px; /* Font-size um pouco menor para o botão */
-            margin-top: 0; /* Remover margem superior */
         }
         button:hover {
             background-color: #218838;
@@ -69,15 +57,16 @@
             text-align: center;
         }
         #invert-button {
-            padding: 6px 15px; /* Botão mais fino */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 8px 15px; /* Aumentado o padding para deixar o botão um pouco maior */
             background-color: #333;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 14px; /* Aumentada a font-size */
-            width: 100%; /* Garantir que o botão tenha o mesmo comprimento do container */
-            margin-top: 0; /* Remover margem superior */
+            font-size: 14px; /* Aumentada a font-size para tornar o botão um pouco maior */
         }
         #invert-button:hover {
             background-color: #555;
