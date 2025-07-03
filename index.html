@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tô aprovado Zarns!</title>
+    
+    <!-- Favicon e ícones para diferentes dispositivos -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2NjdlZWEiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNzY0YmEyIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTQiIGZpbGw9InVybCgjZ3JhZCkiLz4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iOCIgZmlsbD0id2hpdGUiLz4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iNCIgZmlsbD0idXJsKCNncmFkKSIvPgo8cGF0aCBkPSJNOCAxMkMxMCAxMCAxNCAxMCAxNiAxMkMxOCAxMCAyMiAxMCAyNCAxMiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CjxyZWN0IHg9IjEyIiB5PSI0IiB3aWR0aD0iOCIgaGVpZ2h0PSI0IiByeD0iMiIgZmlsbD0iIzMzMyIvPgo8L3N2Zz4=">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNjY3ZWVhIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc2NGJhMiIvPgo8L2xpbmVhckdyYWRpZW50Pgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiByeD0iMjAiIGZpbGw9InVybCgjZ3JhZCkiLz4KPGNpcmNsZSBjeD0iOTAiIGN5PSI5MCIgcj0iNDAiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjkwIiBjeT0iOTAiIHI9IjIwIiBmaWxsPSJ1cmwoI2dyYWQpIi8+CjxwYXRoIGQ9Ik00MCA2MEMxMCA1MCA3MCA1MCA5MCA2MEM0MCA1MCA3MCA1MCA5MCA2MCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIi8+CjxyZWN0IHg9IjcwIiB5PSIyMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjIwIiByeD0iMTAiIGZpbGw9IiMzMzMiLz4KPC9zdmc+">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            transition: all 0.4s ease;
+            overflow-x: hidden;
+        }
+
+        /* === TELA INICIAL === */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.4s ease;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            padding: 0 20px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .logo-area {
+            margin-bottom: 2rem;
+        }
+
+        .graduation-icon {
+            font-size: 4rem;
+            display: block;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #fff, #f0f8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .features-preview {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            background: rgba(255,255,255,0.15);
+            padding: 1rem 1.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.25);
+        }
+
+        .cta-button {
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        /* === CONTROLES FLUTUANTES === */
+        .floating-controls {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            z-index: 1000;
+            display: flex;
+            gap: 12px;
+        }
+
+        .floating-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .floating-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+
+        /* === CALCULADORA === */
+        .main-container {
+            display: none;
+            min-height: 100vh;
+            padding: 20px;
+            background: #f8f9fa;
+            transition: all 0.4s ease;
+        }
+
+        .calculator-container {
+            max-width: 520px;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .calculator-header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .author-credit {
+            color: #666;
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .back-to-home {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #f8f9fa;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .back-to-home:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .input-section {
+            margin-bottom: 20px;
+        }
+
+        .input-section label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .calculate-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 25px;
+        }
+
+        .calculate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+        }
+
+        .result-display {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: bold;
+            display: none;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .result-display.show { display: block; }
+
+        .result-approved {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+        }
+
+        .result-final-exam {
+            background: linear-gradient(135deg, #ffc107, #fd7e14);
+            color: white;
+        }
+
+        .result-failed {
+            background: linear-gradient(135deg, #dc3545, #e83e8c);
+            color: white;
+        }
+
+        .utility-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .utility-btn {
+            flex: 1;
+            padding: 12px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .utility-btn:hover {
+            background: #e9ecef;
+        }
+
+        /* === MODO ESCURO === */
+        body.dark-mode {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+        }
+
+        body.dark-mode .hero-section {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+        }
+
+        body.dark-mode .hero-title {
+            background: linear-gradient(45deg, #ecf0f1, #bdc3c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.dark-mode .feature-item {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        body.dark-mode .cta-button {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.8);
+        }
+
+        body.dark-mode .cta-button:hover {
+            background: rgba(255,255,255,0.9);
+            color: #2c3e50;
+        }
+
+        body.dark-mode .main-container {
+            background: #1a1a1a;
+        }
+
+        body.dark-mode .calculator-container {
+            background: #2d2d2d;
+            color: white;
+        }
+
+        body.dark-mode .input-field {
+            background: #404040;
+            border-color: #555;
+            color: white;
+        }
+
+        body.dark-mode .input-section label {
+            color: #ccc;
+        }
+
+        body.dark-mode .utility-btn {
+            background: #404040;
+            border-color: #555;
+            color: white;
+        }
+
+        body.dark-mode .back-to-home {
+            background: #404040;
+            border-color: #555;
+            color: #ccc;
+        }
+
+        body.dark-mode .back-to-home:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        body.dark-mode .author-credit {
+            color: #aaa;
+        }
+
+        /* === ANIMAÇÕES === */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* === RESPONSIVIDADE === */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .features-preview {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .calculator-container {
+                margin: 20px auto;
+                padding: 25px;
+            }
+            
+            .floating-controls {
+                top: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Controles Flutuantes -->
+    <div class="floating-controls">
+        <button class="floating-btn" onclick="toggleDarkMode()" title="Alternar modo escuro">🌙</button>
+        <button class="floating-btn" onclick="resetAll()" title="Limpar tudo">🔄</button>
+    </div>
+
+    <!-- Tela Inicial -->
+    <div class="hero-section" id="heroSection">
+        <div class="hero-content">
+            <div class="logo-area">
+                <span class="graduation-icon">🎯</span>
+                <h1 class="hero-title">Tô aprovado Zarns!</h1>
+            </div>
+            
+            <p class="tagline">Sua calculadora acadêmica inteligente</p>
+            
+            <div class="features-preview">
+                <div class="feature-item">📊 Cálculo Automático</div>
+                <div class="feature-item">🎯 Nota para Aprovação</div>
+            </div>
+            
+            <button class="cta-button" onclick="showCalculator()">🚀 Calcular Minhas Notas</button>
+        </div>
+    </div>
+
+    <!-- Calculadora Principal -->
+    <div class="main-container" id="mainContainer">
+        <div class="calculator-container">
+            <div class="calculator-header">
+                <h1>🎯 Tô aprovado Zarns!</h1>
+                <p class="author-credit">Por Eduardo Chaves Queiroz</p>
+                <a href="#" class="back-to-home" onclick="showHero()">← Voltar ao Início</a>
+            </div>
+
+            <div class="input-section">
+                <label for="av1_teorica">📚 Nota Teórica da AV1</label>
+                <input type="number" id="av1_teorica" class="input-field" placeholder="Digite sua nota (0-100)" min="0" max="100" step="0.01" oninput="formatGradeInput(this)">
+            </div>
+
+            <div class="input-section">
+                <label for="av1_pratica">🔬 Nota Prática da AV1</label>
+                <input type="number" id="av1_pratica" class="input-field" placeholder="Digite sua nota (0-100)" min="0" max="100" step="0.01" oninput="formatGradeInput(this)">
+            </div>
+
+            <div class="input-section">
+                <label for="av2_teorica">📖 Nota Teórica da AV2</label>
+                <input type="number" id="av2_teorica" class="input-field" placeholder="Digite sua nota (0-100)" min="0" max="100" step="0.01" oninput="formatGradeInput(this)">
+            </div>
+
+            <div class="input-section">
+                <label for="av2_pratica">⚗️ Nota Prática da AV2</label>
+                <input type="number" id="av2_pratica" class="input-field" placeholder="Digite sua nota (0-100)" min="0" max="100" step="0.01" oninput="formatGradeInput(this)">
+            </div>
+
+            <button class="calculate-button" onclick="calculateGrades()">🎯 Calcular Minha Média</button>
+
+            <div id="resultDisplay" class="result-display"></div>
+
+            <div class="utility-buttons">
+                <button class="utility-btn" onclick="clearFields()">🗑️ Limpar Campos</button>
+                <button class="utility-btn" onclick="showHero()">🏠 Tela Inicial</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navegação entre telas
+        function showCalculator() {
+            document.getElementById('heroSection').style.display = 'none';
+            document.getElementById('mainContainer').style.display = 'block';
+        }
+
+        function showHero() {
+            document.getElementById('heroSection').style.display = 'flex';
+            document.getElementById('mainContainer').style.display = 'none';
+            clearFields();
+        }
+
+        // Modo escuro
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        }
+
+        // Limpar campos
+        function clearFields() {
+            document.getElementById('av1_teorica').value = '';
+            document.getElementById('av1_pratica').value = '';
+            document.getElementById('av2_teorica').value = '';
+            document.getElementById('av2_pratica').value = '';
+            document.getElementById('resultDisplay').className = 'result-display';
+            document.getElementById('resultDisplay').innerHTML = '';
+        }
+
+        // Reset completo
+        function resetAll() {
+            clearFields();
+            if (document.getElementById('mainContainer').style.display === 'block') {
+                showHero();
+            }
+        }
+
+        // Função para formatar e validar entrada de notas
+        function formatGradeInput(input) {
+            // Substitui vírgula por ponto
+            let value = input.value.replace(',', '.');
+            
+            // Remove caracteres não numéricos (exceto ponto e números)
+            value = value.replace(/[^0-9.]/g, '');
+            
+            // Garante apenas um ponto decimal
+            let parts = value.split('.');
+            if (parts.length > 2) {
+                value = parts[0] + '.' + parts.slice(1).join('');
+            }
+            
+            // Converte para número para validação
+            let numValue = parseFloat(value);
+            
+            // Aplica limites de 0 a 100
+            if (!isNaN(numValue)) {
+                if (numValue < 0) {
+                    value = '0';
+                } else if (numValue > 100) {
+                    value = '100';
+                }
+            }
+            
+            // Atualiza o valor do input
+            input.value = value;
+        }
+
+        // Função principal de cálculo
+        function calculateGrades() {
+            const av1_teorica = parseFloat(document.getElementById("av1_teorica").value);
+            const av1_pratica = parseFloat(document.getElementById("av1_pratica").value);
+            const av2_teorica = parseFloat(document.getElementById("av2_teorica").value);
+            const av2_pratica = parseFloat(document.getElementById("av2_pratica").value);
+            
+            // Validação
+            if (isNaN(av1_teorica) || isNaN(av1_pratica) || isNaN(av2_teorica) || isNaN(av2_pratica)) {
+                showResult("⚠️ Por favor, preencha todas as notas!", "result-failed");
+                return;
+            }
+            
+            // Cálculos
+            const media_av1 = (av1_teorica * 0.6) + (av1_pratica * 0.4);
+            const media_av2 = (av2_teorica * 0.6) + (av2_pratica * 0.4);
+            const nota_final = (media_av1 + media_av2) / 2;
+            
+            // Resultado detalhado
+            let resultado = `<h3>📊 Análise Completa</h3>`;
+            resultado += `<p><strong>Média AV1:</strong> ${media_av1.toFixed(2)}</p>`;
+            resultado += `<p><strong>Média AV2:</strong> ${media_av2.toFixed(2)}</p>`;
+            resultado += `<p><strong>Média Final:</strong> ${nota_final.toFixed(2)}</p>`;
+            resultado += `<hr style="margin: 15px 0; border: 1px solid rgba(255,255,255,0.3);">`;
+            
+            let resultClass = '';
+            
+            if (nota_final >= 70) {
+                resultado += "<h4>🎉 APROVADO DIRETAMENTE!</h4>";
+                resultado += "<p>Parabéns! Você não precisa fazer avaliação final.</p>";
+                resultClass = 'result-approved';
+            } else if (nota_final >= 40) {
+                const nota_necessaria = (60 - (nota_final * 0.6)) / 0.4;
+                resultado += "<h4>📝 AVALIAÇÃO FINAL NECESSÁRIA</h4>";
+                resultado += `<p>Você precisa obter pelo menos <strong>${nota_necessaria.toFixed(2)}</strong> na avaliação final para ser aprovado.</p>`;
+                resultClass = 'result-final-exam';
+                
+                // Solicitar nota da avaliação final
+                setTimeout(() => {
+                    const avaliacao_final = prompt("🎯 Digite a nota da avaliação final (0-100):");
+                    if (avaliacao_final !== null && !isNaN(parseFloat(avaliacao_final))) {
+                        const media_final = (nota_final * 0.6) + (parseFloat(avaliacao_final) * 0.4);
+                        resultado += `<hr style="margin: 15px 0; border: 1px solid rgba(255,255,255,0.3);">`;
+                        resultado += `<p><strong>Nota Avaliação Final:</strong> ${parseFloat(avaliacao_final).toFixed(2)}</p>`;
+                        resultado += `<p><strong>Média Final com AF:</strong> ${media_final.toFixed(2)}</p>`;
+                        
+                        if (media_final >= 60) {
+                            resultado += "<h4>🎉 APROVADO NA AVALIAÇÃO FINAL!</h4>";
+                            showResult(resultado, 'result-approved');
+                        } else {
+                            resultado += "<h4>❌ REPROVADO NA AVALIAÇÃO FINAL</h4>";
+                            showResult(resultado, 'result-failed');
+                        }
+                    }
+                }, 1000);
+            } else {
+                resultado += "<h4>❌ REPROVADO DIRETAMENTE</h4>";
+                resultado += "<p>Mesmo com nota máxima na avaliação final, não será possível atingir a média mínima.</p>";
+                resultClass = 'result-failed';
+            }
+            
+            showResult(resultado, resultClass);
+        }
+
+        // Exibir resultado
+        function showResult(content, className) {
+            const resultDiv = document.getElementById('resultDisplay');
+            resultDiv.innerHTML = content;
+            resultDiv.className = `result-display show ${className}`;
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carregar preferência de modo escuro
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            // Eventos de teclado
+            const inputs = document.querySelectorAll('.input-field');
+            inputs.forEach(input => {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        calculateGrades();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
